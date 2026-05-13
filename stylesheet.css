@@ -126,9 +126,9 @@ body {
 }
 
 .name {
-  font-family: 'Special Elite', 'JetBrains Mono', monospace;
-  font-size: 46px;
-  font-weight: 400;
+  font-family: 'American Typewriter', 'Cutive', 'Special Elite', 'Courier New', serif;
+  font-size: 48px;
+  font-weight: 700;
   letter-spacing: 0.01em;
   background: linear-gradient(120deg,
     var(--rust) 0%,
