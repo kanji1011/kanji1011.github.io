@@ -5,18 +5,15 @@
   <title>Kanishk Jain</title>
   <meta name="author" content="Kanishk Jain">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Special+Elite&display=swap">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
 </head>
 <body>
 
-<div class="bg-orbs">
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
-  <div class="orb o3"></div>
-  <div class="orb o4"></div>
-  <div class="orb o5"></div>
-</div>
+<div class="bg-orbs" aria-hidden="true"></div>
 
 <div class="container">
 
@@ -25,7 +22,6 @@
     <a href="index.html" class="active">~/home</a>
     <a href="index.html#publications">~/publications</a>
     <a href="blog.html">~/blog</a>
-    <a href="data/Kanishk_CV.pdf">~/cv</a>
   </nav>
 
   <!-- ============ HERO ============ -->
@@ -55,7 +51,7 @@
       </div>
     </div>
     <div class="avatar-wrap">
-      <img class="avatar" src="images/IMG_20250118_144211_447.webp" alt="Kanishk Jain">
+      <img class="avatar" src="images/IMG_20250118_144211_447.webp" alt="Kanishk Jain" width="400" height="400" decoding="async">
     </div>
   </header>
 
@@ -75,7 +71,7 @@
 
     <!-- Featured: failure discovery -->
     <article class="pub featured">
-      <div class="pub-thumb"><img src="images/failure_discovery.png" alt=""></div>
+      <div class="pub-thumb"><img src="images/failure_discovery.png" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <span class="pub-tag">New · 2026</span>
         <div class="pub-title"><a href="https://arxiv.org/abs/2604.04733">Discovering Failure Modes in Vision-Language Models using RL</a></div>
@@ -87,7 +83,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/prioritized_concept.png" alt=""></div>
+      <div class="pub-thumb"><img src="images/prioritized_concept.png" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://arxiv.org/abs/2506.01085">Prioritized Concept Learning via Relative Error-driven Sample Selection</a></div>
         <div class="pub-authors">Shivam Chandhok, Qian Yang, Oscar Mañas, <strong>Kanishk Jain</strong>, Leonid Sigal, Aishwarya Agrawal</div>
@@ -98,7 +94,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/cultural_vqa.png" alt=""></div>
+      <div class="pub-thumb"><img src="images/cultural_vqa.png" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://arxiv.org/abs/2407.10920">Benchmarking Vision-Language Models for Cultural Understanding</a></div>
         <div class="pub-authors">Shravan Nayak, <strong>Kanishk Jain</strong>, Rabiul Awal, Siva Reddy, et al.</div>
@@ -109,7 +105,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/fgvc10_2023.png" alt=""></div>
+      <div class="pub-thumb"><img src="images/fgvc10_2023.png" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://openreview.net/forum?id=hiQG8qGxso">Test-Time Amendment with a Coarse Classifier for Fine-Grained Classification</a></div>
         <div class="pub-authors"><strong>Kanishk Jain</strong>, Shyamgopal Karthik, Vineet Gandhi</div>
@@ -123,7 +119,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/roman_2023.png" alt=""></div>
+      <div class="pub-thumb"><img src="images/roman_2023.png" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://arxiv.org/abs/2305.12363">Instance-Level Semantic Maps for Vision-Language Navigation</a></div>
         <div class="pub-authors">Laksh Nanwani, Anmol Agarwal, <strong>Kanishk Jain</strong>, Raghav Prabhakar, Aaron Monis, Aditya Mathur, Krishna Murthy, Abdul Hafez, Vineet Gandhi, K. Madhava Krishna</div>
@@ -137,7 +133,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/vln_2022.jpg" alt=""></div>
+      <div class="pub-thumb"><img src="images/vln_2022.jpg" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://arxiv.org/abs/2209.11972">Ground then Navigate: Language-Guided Navigation in Dynamic Scenes</a></div>
         <div class="pub-authors"><strong>Kanishk Jain*</strong>, Varun Chhangani*, Amogh Tiwari, K. Madhava Krishna, Vineet Gandhi</div>
@@ -151,7 +147,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/mvd.jpg" alt=""></div>
+      <div class="pub-thumb"><img src="images/mvd.jpg" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://openaccess.thecvf.com/content/WACV2023W/RWS/html/Vora_Bringing_Generalization_to_Deep_Multi-View_Pedestrian_Detection_WACVW_2023_paper.html">Bringing Generalization to Deep Multi-View Detection</a></div>
         <div class="pub-authors">Jeet Vora, Swetanjal Dutta, <strong>Kanishk Jain</strong>, Shyamgopal Karthik, Vineet Gandhi</div>
@@ -166,7 +162,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/acl_2022.jpg" alt=""></div>
+      <div class="pub-thumb"><img src="images/acl_2022.jpg" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://aclanthology.org/2022.findings-acl.270/">Comprehensive Multi-Modal Interactions for Referring Image Segmentation</a></div>
         <div class="pub-authors"><strong>Kanishk Jain</strong>, Vineet Gandhi</div>
@@ -181,7 +177,7 @@
     </article>
 
     <article class="pub">
-      <div class="pub-thumb"><img src="images/iros_2021.jpg" alt=""></div>
+      <div class="pub-thumb"><img src="images/iros_2021.jpg" alt="" loading="lazy" decoding="async" width="280" height="180"></div>
       <div>
         <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9636172">Grounding Linguistic Commands to Navigable Regions</a></div>
         <div class="pub-authors"><strong>Kanishk Jain*</strong>, Nivedita Rufus*, Unni Krishnan R. Nair*, Vineet Gandhi, K. Madhava Krishna</div>
