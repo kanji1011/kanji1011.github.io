@@ -1,5 +1,5 @@
 /* ---------- Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Special+Elite&display=swap');
 
 /* ---------- Theme: earthy parchment (multi-tone) ---------- */
 :root {
@@ -35,13 +35,52 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.65;
-  font-size: 15px;
+  line-height: 1.7;
+  font-size: 14px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Typewriter accent font for big display elements */
+.tw { font-family: 'Special Elite', 'JetBrains Mono', monospace; }
+
+/* ---------- Top nav ---------- */
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 14px 0 24px;
+  border-bottom: 1px dashed var(--border);
+  margin-bottom: 24px;
+  font-size: 13px;
+}
+.topnav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+.topnav a::before { content: ''; }
+.topnav a:hover {
+  color: var(--rust);
+  background: rgba(176, 73, 42, 0.08);
+}
+.topnav a.active {
+  color: var(--rust);
+  font-weight: 600;
+}
+.topnav a.active::after {
+  content: '';
+  position: absolute;
+  left: 8px; right: 8px; bottom: 0;
+  height: 2px;
+  background: var(--rust);
+  border-radius: 2px;
 }
 
 /* ---------- Animated background ---------- */
@@ -93,9 +132,10 @@ body {
 }
 
 .name {
-  font-size: 44px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 46px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
   background: linear-gradient(120deg,
     var(--rust) 0%,
     var(--clay) 20%,
@@ -331,6 +371,96 @@ section { margin-top: 56px; }
   transition: all 0.2s;
 }
 .pub-desc { font-size: 13px; color: var(--text-dim); margin-top: 6px; }
+
+/* ---------- Blog ---------- */
+.blog-header { padding: 20px 0 30px; animation: fadeUp 0.8s ease-out; }
+.blog-header .bio { color: var(--text-dim); margin-top: 14px; }
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+
+.post-card {
+  --c: var(--sienna);
+  position: relative;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.post-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px; bottom: 16px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--c);
+  opacity: 0.75;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--c) 55%, transparent);
+  box-shadow: 0 10px 32px color-mix(in srgb, var(--c) 22%, transparent);
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.post-date {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+.post-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--c) 12%, transparent);
+  color: var(--c);
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+.post-title {
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+.post-title a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.post-card:hover .post-title a { color: var(--c); }
+
+.post-excerpt {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+  line-height: 1.65;
+}
+
+.read-more {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: var(--c);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: border-color 0.2s;
+}
+.read-more:hover { border-bottom-color: var(--c); }
 
 /* ---------- Footer ---------- */
 footer {
