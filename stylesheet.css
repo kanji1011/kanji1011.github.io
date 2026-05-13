@@ -49,38 +49,35 @@ body {
 /* ---------- Top nav ---------- */
 .topnav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px 20px;
-  padding: 14px 0 24px;
-  border-bottom: 1px dashed var(--border);
-  margin-bottom: 24px;
-  font-size: 13px;
+  justify-content: flex-end;
+  gap: 36px;
+  padding: 24px 0 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 28px;
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 17px;
 }
 .topnav a {
-  color: var(--text-dim);
+  color: var(--text);
   text-decoration: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  transition: all 0.2s ease;
+  padding: 4px 2px;
   position: relative;
+  transition: color 0.2s ease;
 }
-.topnav a::before { content: ''; }
-.topnav a:hover {
-  color: var(--rust);
-  background: rgba(176, 73, 42, 0.08);
-}
-.topnav a.active {
-  color: var(--rust);
-  font-weight: 600;
-}
-.topnav a.active::after {
+.topnav a::after {
   content: '';
   position: absolute;
-  left: 8px; right: 8px; bottom: 0;
+  left: 0; right: 0; bottom: 0;
   height: 2px;
   background: var(--rust);
-  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
 }
+.topnav a:hover { color: var(--rust); }
+.topnav a:hover::after { transform: scaleX(1); }
+.topnav a.active { color: var(--rust); }
+.topnav a.active::after { transform: scaleX(1); }
 
 /* ---------- Animated background ---------- */
 .bg-orbs {
